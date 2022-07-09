@@ -1,25 +1,25 @@
-/*using HermanosApi.DAL;
-using HermanosApi.Models;*/
+using HermanosApi.DAL;
+using HermanosApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace HermanosApi.Controllers;
 
-/*[ApiController]
+[ApiController]
 [Route("[controller]")]
 public class HermanosController : ControllerBase
 {
     private readonly ILogger<HermanosController> _logger;
-    //private Contexto _contexto;
+    private Contexto _contexto;
 
     public HermanosController(ILogger<HermanosController> logger, Contexto contexto)
     {
         _logger = logger;
-    //    _contexto = contexto;
+        _contexto = contexto;
     }
 
     [HttpGet(Name = "GetHermanos")]
-    /*public IEnumerable<Hermanos> Get()
+    public IEnumerable<Hermanos> Get()
     {
         return _contexto.Hermanos.AsNoTracking().ToList();
     }
@@ -33,4 +33,4 @@ public class HermanosController : ControllerBase
         return CreatedAtAction(nameof(PostHermano), hermanos);
     }
 
-}*/
+}
