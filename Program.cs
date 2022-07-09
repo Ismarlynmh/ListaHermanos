@@ -1,9 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using HermanosApi.DAL;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+ var ConStr = builder.Configuration.GetConnectionString("ConStr");
+
+builder.Services.AddDbContext<Contexto>(options =>  options.UseSqlite(ConStr));
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
