@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HermanosApi.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20220709195703_inicial")]
+    [Migration("20220709211826_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
